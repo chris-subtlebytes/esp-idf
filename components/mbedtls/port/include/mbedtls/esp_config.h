@@ -3041,6 +3041,12 @@
 #undef MBEDTLS_NIST_KW_C
 #endif
 
+#ifdef CONFIG_MBEDTLS_USE_PSA_CRYPTO
+#define MBEDTLS_USE_PSA_CRYPTO
+#else
+#undef MBEDTLS_USE_PSA_CRYPTO
+#endif
+
 /* \} name SECTION: Module configuration options */
 
 #if defined(TARGET_LIKE_MBED)
